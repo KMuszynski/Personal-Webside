@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #1d2230;
+  }
+  *{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  .taskBar{
+    background-color: #2e4258;
+    border-radius: 50px;
+    display: flex;
+    height: 35px;
+    margin: 30px 15px 0px 15px;
+  }
+  .title{
+    background-color: #242742;
+    border-radius: 50px;
+    height: 220px;
+    margin: auto;
+    display: flex;
+    margin: 30px 15px;
+  }
+  .profilePic{
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: 1000px;
+    padding: 10px;
+    display: block;
+  }
+  .signature {
+    text-align: center;
+    margin: auto;
+    text-
+  }
+  
+  
+  
