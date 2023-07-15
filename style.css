@@ -33,7 +33,7 @@ html {
   margin-right: 40px;
   text-decoration: none;
 }
-.barButton {
+div > button {
   color: white;
   background-color: rgb(52, 69, 95);
   text-align: center;
