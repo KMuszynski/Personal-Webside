@@ -4,6 +4,8 @@ const infoPos = calculatePos("informations");
 const projectsPos = calculatePos("projectsID");
 const cvPos = calculatePos("CV");
 const contactPos = calculatePos("contactID");
+const FirstPlacePos = calculatePos("swiftBoardText");
+let confettiDeployed = false;
 
 function calculatePos(id) {
   const targetElement = document.getElementById(id);
@@ -46,8 +48,10 @@ const button2 = document.getElementById("projects");
 const button3 = document.getElementById("cv");
 const button4 = document.getElementById("contact");
 
-//button1.classList.add('button-activated');
+//for confetti
+const canvas = document.querySelector('#confetti');
 
+//activating buttons and confetti
 window.addEventListener('scroll', (event)=>{
     const scrollPosition = window.scrollY || window.pageYOffset;
     if(scrollPosition >= infoPos && scrollPosition < projectsPos)
@@ -65,6 +69,17 @@ window.addEventListener('scroll', (event)=>{
         button1.classList.remove('button-activated');
         button3.classList.remove('button-activated');
         button4.classList.remove('button-activated');
+
+        if(scrollPosition >= FirstPlacePos)
+        {
+            if(confettiDeployed == false)
+            {
+                console.log("conf");
+                confettiDeployed = true;
+                const jsConfetti = new JSConfetti();
+                jsConfetti.addConfetti();
+            }
+        }
     }
     else if(scrollPosition >= cvPos && scrollPosition < contactPos)
     {
